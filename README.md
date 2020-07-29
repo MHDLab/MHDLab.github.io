@@ -1,2 +1,2 @@
 # MHDLab.github.io
-MHD Lab Public Website
+[MHD Lab Public Website](https://mhdlab.github.io/)

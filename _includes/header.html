@@ -1,0 +1,51 @@
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <!-- <a href="{{ site.baseurl }}/" class="logo">
+      {% if site.logo %}
+      <img src="{{ site.logo | prepend: site.baseurl }}" alt="{{ site.title }}">
+      {% else %}
+      <span>{{ site.title }}</span>
+      {% endif %}
+    </a> -->
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				{% include nav_links.html %}
+      </ul>
+    </nav>
+
+  
+
+
+  <div class="site-contact">
+
+    <!-- <p><strong>Contact</strong></p> -->
+    <ul class="social-media-list">
+      <li>
+        <a href="mailto:{{ site.email }}">
+          <i class="fa fa-envelope-o" style="font-size: 1.3em;"></i>
+          <!-- <span>{{ site.email }}</span> -->
+        </a>
+      </li>
+
+      {% for social in site.social %}
+        {% if social.url != "" %}
+        <li>
+          <a href="{{ social.url }}" title="{{ social.desc }}">
+            <i class="fa fa-{{ social.icon }}" style="font-size: 1.3em;"></i>
+            <!-- <span class="username">{% if social.username %}{{ social.username }}{% else %}{{ social.name }}{% endif %}</span> -->
+          </a>
+        </li>
+        {% endif %}
+      {% endfor %}
+
+    </ul>
+  </div>
+
+  
+</div>
+
+
+</header>

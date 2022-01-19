@@ -18,10 +18,10 @@ Scientific research into energy storage technologies has exploded in recent year
 <figcaption style="text-align: center;font-style: italic;">Left: The number of all annual publications in the left) full Semantic Scholar Open Research Corpus database, excluding papers categorized as solely 'Medicine' by Microsoft Academic and right) The percentage of papers containing term "Energy Storage" in the title or abstract.</figcaption>
 </figure>
 
-
 ## Interactive Topic Model Plot
 Below is an interactive plot that explores a topic model of an energy storage literature dataset. The literature dataset was obtained from the semantic scholar open research corpus by finding **papers that contained the term 'energy storage' in the title or abstract resulting in approximately 70,000 papers**. Topic modeling was performed using Latent Dirichlet Allocation (LDA) with [Gensim](https://radimrehurek.com/gensim/). LDA is an unsupervised machine learning technique to determine a set of topics that can represnt the modeled collection of texts (corpus).  To understand the high level structure of the corpus the probability that a given pair of topics are present together in the same paper was calculated. This co-occurrence matrix defines the edges of a graph where the nodes are each topic. Research communities are then determined through the Louvian community detection algorithm, as described in [Bickel (2019)](https://energsustainsoc.biomedcentral.com/articles/10.1186/s13705-019-0226-z).
 
+**The code used to generate this plot can be found on github [here](https://github.com/MHDLab/SciLitNLP)**
 
 <div class="row" style="width:100%">
   <embed type="text/html" src="topic_network.html" style="width:100%" height=2000> 

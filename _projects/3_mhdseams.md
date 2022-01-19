@@ -14,7 +14,7 @@ We have recently digitized this collection of works and released them on DOE's [
 # Per-paper Topic Distribution Visualization with t-SNE
 Below is an interactive plot showing natural language processing results grouping the papers from the SEAMs into topics. To use the plot, mouse over each item to get information about the paper. Papers can be clicked to open up the articles web page (you will have to allow popups). Use the tools on the right to move around, and note the 'refresh' button to reset the graph. Topics can be hidden by clicking on the topic color in the legend.
 
-See below the plot for more explanation. 
+See below the plot for more explanation. **The code used to generate this plot can be found on github [here](https://github.com/MHDLab/SciLitNLP)**
 
 <div class="row" style="width:100%">
   <embed type="text/html" src="wedgeplot.html" style="width:100%" height=950> 

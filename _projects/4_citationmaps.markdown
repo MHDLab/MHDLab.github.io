@@ -26,7 +26,7 @@ One of the main challenes I've encountered in natural language processing of sci
 * Perform topic modeling on the dataset with a [CorEx topic model](https://github.com/gregversteeg/corex_topic)
 
 
-[See the repository here](https://github.com/aspitarl/NLP-Semantic) for the codes used to generate the plots below and more information about the dataset used. 
+[See the repository here](https://github.com/MHDLab/SciLitNLP) for the codes used to generate the plots below and more information about the dataset used. 
 
 
 # Building a Citation network for "Geographic imaging system"

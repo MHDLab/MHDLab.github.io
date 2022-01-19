@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Magnetohydrodynamic power generation
-description: Research into MHD power generation to enable oxy-fuel carbon capture
+description: Research into magnetohydrodynamic power generation to enable oxy-fuel carbon capture
 img: /projects/2_aiaa/TurbovsMHD.PNG
 importance: 1
 ---
 
-My main research project at the moment is studying magnetohydrodynamic power generation for oxy-fuel based carbon capture.  You can find my most recent paper study the electrical resistance of our MHD channel here:
+Our research studies magnetohydrodynamic (MHD) power generation for oxy-fuel based carbon capture.  You can find our recent paper studying the electrical resistance of our MHD channel here:
 ### [Resistance Measurements of a High-velocity Oxy-fuel Powered MHD Channel](https://arc.aiaa.org/doi/10.2514/6.2020-3656)
 
 
@@ -25,7 +25,7 @@ of overcoming these challenges with modern scientific insights and technology.
 <!-- ![](TurbovsMHD.PNG =250x)   -->
 
 
-At NETL we study MHD power generation with a high-velociy  oxy-fuel combustion system
+At NETL we study MHD power generation with a high-velociy oxy-fuel combustion system
 
 <video width="720" height="480" controls autoplay muted loop>
   <source src="TorchOn_embed.mp4" type="video/mp4">

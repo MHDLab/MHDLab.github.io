@@ -12,7 +12,7 @@ main_nav: true
 
 
 <p style="text-align:center">
-Welcome to the MHD Lab website.
+Welcome to the MHD Lab website. We study magnetohydrodynamic (MHD) power generation as well as other topics in basic energy research. See the projects page for more detail. 
 </p>
 
 

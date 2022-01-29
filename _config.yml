@@ -65,6 +65,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  nlp_reports:
+    output: true
+    permalink: /nlp_reports/:path/
 
 # Social icons and sharing options
 #

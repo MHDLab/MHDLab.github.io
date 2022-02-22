@@ -5,27 +5,27 @@ the lifetime of the system.
 $$LCOE\ \left\lbrack \frac{\$}{kWh} \right\rbrack = \frac{\sum_{n}^{}{\frac{C_{charge}}{(1 + r)^{n}} +}C_{invest} + \sum_{n}^{}{\frac{C_{O\& M}}{(1 + r)^{n}} +}\text{~}\sum_{n}^{}\frac{C_{EOL}}{(1 + r)^{n}}}{\sum_{n}^{}\frac{E_{out}}{(1 + r)^{n}}}$$
 
 $r$ -- discount rate
-
+<br>
 $n$ -- number of years (costs and output are accumulated over a year)
-
+<br>
 $C_{charge}$ -- Charging Cost (\$/year)
-
+<br>
 $C_{invest}$- Investment costs (\$)
-
+<br>
 $C_{O\& M}$- Operation and Maintenance costs (\$/year)
-
+<br>
 $C_{EOL}$ -- End of life costs (\$/year)
-
+<br>
 $E_{out}$ -- Electricity out (kWh)
-
+<br>
 LT -- System Lifetime in years
-
+<br>
 DD -- Discharge Duration
-
+<br>
 $\eta_{RT}$ -- Round trip efficiency
-
+<br>
 $\eta_{d}$- Discharge Efficiency
-
+<br>
 To simplify this equation let's neglect $O\& M$ and $EOL$ costs. Further
 we will neglect the discount rate ($r = 1$). By neglecting the discount
 rate we are assuming the charging cost does not change and those terms

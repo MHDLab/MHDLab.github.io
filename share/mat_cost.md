@@ -29,7 +29,7 @@ $$
 
 <div markdown = "0">
 <button type="button" class="collapsible">Open for term definitions and  derivation of LCOS equation </button>
-  <div class="extended">
+  <div class="extended" style="display:none">
 
     {% include_relative lcos.md %}
 

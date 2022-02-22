@@ -7,6 +7,7 @@ use_math: true
 This page is an ongoing attempt to consolidate data from the literature on the material cost floor for the energy capital cost ($\\$/kWh$) for different energy types suitable for long duration storage. 
 
 
+
 # Levelized cost of storage (LCOS)
 
 A key metric for energy storage systems is levelized cost of storage (**LCOS**) which can be defined as the extra cost, in addition to the **Price of Electricty** paid by the system operator, that must be charged to make the energy storage system economically viable. 
@@ -23,11 +24,58 @@ A key metric for energy storage systems is levelized cost of storage (**LCOS**) 
 With some simplifying assumptions (no discount rate, no O&M, no end of life, capacity factor = 1) we can form a simplified version of the LCOS:
 
 $$
-LCOS[$/kWh] = (1 - \frac{1}{\eta_{RT}}) * Price Electricity + \frac{1}{Lifetime*\eta_{out}}(C_{kW} + C_{kWh} * Duration)
+LCOS[$/kWh] = (\frac{1}{\eta_{RT}} -1) * PE + \frac{1}{LT*\eta_{out}}(C_{kW} + C_{kWh} * DD)
 $$
 
-The first term represents the "Inefficiency electricity premium", which arises as we must purchase extra electricity to compensate for round trip efficiences ($\eta_{RT}$) less than 1. The second term represents money required to repay the capital investement of the plant. The capital is split in to an energy capital cost ($C_{kWh}$) that scales with the storage medium energy capacity and a power capital cost ($C_{kW}$) that scales with the rated power discharge capacity. The ratio of the energy capaicty to the power capacity defines the discharge **Duraiton** of the system (assuming instant charging or duty cycle=1). The system is paid off over it's **Lifetime** and we have to overbuild the capacities by the output efficiency $\eta_{out} = \eta_{discharge}*\eta_{store}$ to compensate for losses. 
+<div markdown = "0">
+<button type="button" class="collapsible">Open for term definitions and  derivation of LCOS equation </button>
+  <div class="extended">
 
+    {% include_relative lcos.md %}
+
+  </div>
+</div>
+
+## LCOS Duration dependence
+
+Below is an interactive plot to explore how LCOS depends on duration. Note: you have to move the sliders to initialize the visualization. 
+
+{% include_relative lcos_duration.html %}
+
+This plot is inspired by recent work from [Hunter et al.](https://doi.org/10.1016/j.joule.2021.06.018).
+
+<figure style="display: inline-block">
+<img src="mat_cost/hunter.png" style="width:70%">
+
+<figcaption style="text-align: center;font-style: italic;">Recent modeling by <a href="https://doi.org/10.1016/j.joule.2021.06.018">Hunter et al.</a> Showing the Levilzed cost of electricity (LCOS + PE) for different technologies</figcaption>
+</figure>
+
+
+## Regions of viability
+
+Let's assume that we want to have a LCOS of no more than 0.1\\$/kWh with the price of electricity being 0.05\\$/kWh. Let's also make the simplifying approximation that $\eta_{RT} \approx \eta_{out}$ We can then solve the LCOS equation for the maximum allowable $C_{kW}$ as a funciton of $C_kWh$, defining a tradeoff curve of economic viabaility.  
+
+$$
+C_{kW} = LT*\eta_{RT}[LCOS - (\frac{1}{\eta_{RT}} - 1)*PE] - C_{kWh}*DD
+$$
+
+Below is an interactive plot to explore this line of economic viability. Regions to the left and below of the line are viable. Note: you have to move the sliders to initialize the visualization. 
+
+
+{% include_relative lcos_viability.html %}
+
+
+This plot was inspired by recent modeling work by [Albertus](https://doi.org/10.1016/j.joule.2019.11.009). 
+
+
+
+
+
+<figure style="display: inline-block">
+<img src="mat_cost/albertus.png" style="width:70%">
+
+<figcaption style="text-align: center;font-style: italic;">Recent modeling by <a href="https://doi.org/10.1016/j.joule.2019.11.009">Albertus</a> that indicates regions (left of lines) of economic viability for different combinations of storage medium fiugres of merit </figcaption>
+</figure>
 
 # LCOS for Long Duration Storage 
 
@@ -44,16 +92,7 @@ The scaling factor with duration represents the key figure of merit for long dur
 * Lifetime of 10 years (~$10^6$ hours) and  
 * $ \eta_{out} = 1$
 
-We calculate $ C_{kWh} <\approx \\$10/kWh $ meaning a energy storage medium cannot have a capital cost significantly above this to be viable for durations on the order of 100 hours. Recent work by [Albertus](https://doi.org/10.1016/j.joule.2019.11.009) is consistent with this message but provides a more quantitative analysis presented in the figure below that includes the tradeoffs between $C_{kWh} (C_{E,th})$, $\eta_{RTE} \propto \eta_{out}$, and $ C_{kW} (C_p)$. The region to the left of the lines indicates combinations of $C_{kWh}$ and $C_{kW}$ that are economically viable. The key message is that the maximum $C_{kWh}$ is the most densitive to increases in duration and around 50-100 hours we require a storage medium with  $C_{kWh} <\approx \\$10/kWh$
-
-
-<center>
-<figure style="display: inline-block">
-<img src="mat_cost/albertus.png" style="width:70%">
-
-<figcaption style="text-align: center;font-style: italic;">Recent modeling by <a href="https://doi.org/10.1016/j.joule.2019.11.009">Albertus</a> that indicates regions (left of lines) of economic viability for different combinations of storage medium fiugres of merit </figcaption>
-</figure>
-</center>
+We calculate $ C_{kWh} <\approx \\$10/kWh $ meaning a energy storage medium cannot have a capital cost significantly above this to be viable for durations on the order of 100 hours. 
 
 # Materials Cost Floor
 
@@ -73,3 +112,7 @@ Sources:
 
 [Kale 2018](https://doi.org/10.1016/j.egyr.2018.09.003)
 
+
+<div markdown = "0">
+{% include collapsible.html %}
+</div>

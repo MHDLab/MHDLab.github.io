@@ -21,7 +21,7 @@ A key metric for energy storage systems is levelized cost of storage (**LCOS**) 
 
 
 
-With some simplifying assumptions (no discount rate, no O&M, no end of life, capacity factor = 1) we can form a simplified version of the LCOS:
+With some simplifying assumptions we can derive an expression of the LCOS:
 
 $$
 LCOS[$/kWh] = (\frac{1}{\eta_{RT}} -1) * PE + \frac{1}{LT*\eta_{out}}(C_{kW} + C_{kWh} * DD)
@@ -38,7 +38,7 @@ $$
 
 ## LCOS Duration dependence
 
-Below is an interactive plot to explore how LCOS depends on duration. Note: you have to move the sliders to initialize the visualization. 
+Below is an interactive plot to explore how LCOS depends on duration for a fixed PE = 0.025$/kWh. Note: you have to move the sliders to initialize the visualization. 
 
 {% include_relative lcos_duration.html %}
 
@@ -53,7 +53,7 @@ This plot is inspired by recent work from [Hunter et al.](https://doi.org/10.101
 
 ## Regions of viability
 
-Let's assume that we want to have a LCOS of no more than 0.1\\$/kWh with the price of electricity being 0.05\\$/kWh. Let's also make the simplifying approximation that $\eta_{RT} \approx \eta_{out}$ We can then solve the LCOS equation for the maximum allowable $C_{kW}$ as a funciton of $C_kWh$, defining a tradeoff curve of economic viabaility.  
+ We can find economically viable combinations of $C_{kW}$ and  $C_{kWh}$ by solving the LCOS equation for the maximum allowable $C_{kW}$ as a funciton of $C_{kWh}$, defining a tradeoff curve of economic viabaility.  We will also make the simplifying approximation that $\eta_{RT} \approx \eta_{out}$.
 
 $$
 C_{kW} = LT*\eta_{RT}[LCOS - (\frac{1}{\eta_{RT}} - 1)*PE] - C_{kWh}*DD

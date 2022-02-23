@@ -89,10 +89,10 @@ The scaling factor with duration represents the key figure of merit for long dur
 
 * LCOS of of 10¢/kWh
 * Duration of 100 hours
-* Lifetime of 10 years (~$10^6$ hours) and  
+* Lifetime of 10 years (~$10^5$ hours) and  
 * $ \eta_{out} = 1$
 
-We calculate $ C_{kWh} <\approx \\$10/kWh $ meaning a energy storage medium cannot have a capital cost significantly above this to be viable for durations on the order of 100 hours. 
+We calculate $ C_{kWh} <\approx \\$100/kWh $ meaning a energy storage medium cannot have a capital cost significantly above this to be viable for durations on the order of 100 hours. The more careful analysis including discount rate, O&M, efficiency etc. by Albertus above puts this number about an order of magnitude lower at $ C_{kWh} <\approx \\$10/kWh $ for ~100 hours of storage.
 
 # Materials Cost Floor
 

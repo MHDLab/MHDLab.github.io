@@ -7,7 +7,7 @@ Here we derive a simplified form of the Levelized cost of electricity
 
 <br>$C_{kW}$ -- Power Capacity Capital Cost (\$/kW)
 
-<br>$C_{kWh}$ -- Energy Capacity Capital Cost (\$/kW)
+<br>$C_{kWh}$ -- Energy Capacity Capital Cost (\$/kWh)
 
 <br>$\eta_{RT}$ -- Round trip efficiency
 

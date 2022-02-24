@@ -38,7 +38,7 @@ $$
 
 ## LCOS Duration dependence
 
-Below is an interactive plot to explore how LCOS depends on duration for a fixed $C_{E,in}$ = 0.025\\$/kWh. Note: you have to move the sliders to initialize the visualization. 
+Below is an interactive plot to explore how LCOS depends on duration for a fixed $C_{E,in}$ = 0.025\\$/kWh. We will also make the simplifying approximation that $\eta_{RT} \approx \eta_{out}$. Note: you have to move the sliders to initialize the visualization. 
 
 {% include_relative lcos_duration.html %}
 
@@ -53,7 +53,7 @@ This plot is inspired by recent work from [Hunter et al.](https://doi.org/10.101
 
 ## Regions of viability
 
- We can find economically viable combinations of $C_{kW}$ and  $C_{kWh}$ by solving the LCOS equation for the maximum allowable $C_{kW}$ as a funciton of $C_{kWh}$, defining a tradeoff curve of economic viabaility.  We will also make the simplifying approximation that $\eta_{RT} \approx \eta_{out}$.
+ We can find economically viable combinations of $C_{kW}$ and  $C_{kWh}$ by solving the LCOS equation for the maximum allowable $C_{kW}$ as a funciton of $C_{kWh}$, defining a tradeoff curve of economic viabaility.  
 
 $$
 C_{kW} = LT*\eta_{RT}[LCOS - (\frac{1}{\eta_{RT}} - 1)*C_{E,in}] - C_{kWh}*DD

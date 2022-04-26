@@ -96,22 +96,21 @@ We calculate $ C_{kWh} <\approx \\$100/kWh $ meaning a energy storage medium can
 
 # Materials Cost Floor
 
-The cost of the material that the storage medium is built out of sets a lower bound on the achievable $C_{kWh}$. Therefore we meed to find a material that costs of less than $ 10\\$/kWh$. Below is a plot that shows data on the energy capital cost of energy stored in different materials for different forms of energy. Viral refers to forms of energy limited by materials strength of a container (flywheel, pressure vessel, SMES). Mouse over to see the name of the material. This plot is an ongoing work in progress with more data to be added. 
+The cost of the material that the storage medium is built out of sets a lower bound on the achievable $C_{kWh}$. Therefore we meed to find a storage medium with a **material energy capital cost $(C_{kWh, mat})$** than approximately $ 10\\$/kWh$. Below is a plot that shows calculated $C_{kWh, mat}$ for a wide range of storage media.  Mouse over to see the name of the material. This plot is an ongoing work in progress with more data to be added. 
 
 <div>
 <center>
-  <embed type="text/html" src="mat_cost/mat_cost_compare.html" style="width:100%" height=800> 
+  <embed type="text/html" src="mat_cost/Ckwh_bokeh.html" style="width:100%" height=800> 
 </center>
 </div>
 
-Sources: 
+$C_{kWh, mat}$ is calculated from the energy density, $\rho_E$ [kWh/kg], of the storage media (storing a given form of enegy) and the material price, $C_{mat}$  [\\$/kg], of the materials used in the storage media through the equation $C_{kWh, mat} = \frac{C_{mat}}{\rho_E}$. The plot below breaks out each storage medium into the material cost and energy density used to calculate $C_{kWh, mat}$ above. Click on a storage medium type in the legend to hide that class of storage medium. The line indicates  $C_{kWh, mat} = 10\\$/kWh$
 
-[Alva et al. 2018](https://doi.org/10.1016/j.energy.2017.12.037)
-
-[Li et al. 2017](https://doi.org/10.1016/j.joule.2017.08.007)
-
-[Kale 2018](https://doi.org/10.1016/j.egyr.2018.09.003)
-
+<div>
+<center>
+  <embed type="text/html" src="mat_cost/Ckwh_line_bokeh.html" style="width:100%" height=800> 
+</center>
+</div>
 
 <div markdown = "0">
 {% include collapsible.html %}

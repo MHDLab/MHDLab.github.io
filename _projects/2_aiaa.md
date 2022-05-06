@@ -25,7 +25,7 @@ of overcoming these challenges with modern scientific insights and technology.
 <!-- ![](TurbovsMHD.PNG =250x)   -->
 
 
-At NETL we study MHD power generation with a high-velociy oxy-fuel combustion system
+At NETL we study MHD power generation with a high-velociy oxy-fuel combustion system. Below you can see a video of the oxy-fuel system turning on. The plots show data for the fuel flow (kerosene) and oxygen flow into the system, along with the pressure in the combusiton chamber. Part of this work has been the development of a custom data acquition framework that can scale to simultaneously acquire data from a diverse array of sensors. 
 
 <video width="720" height="480" controls autoplay muted loop>
   <source src="TorchOn_embed.mp4" type="video/mp4">
@@ -35,14 +35,10 @@ At NETL we study MHD power generation with a high-velociy oxy-fuel combustion sy
 
 
 
-
-
 # Advanced diagnostics     
 
 
-Paired with historical knowledge, we want to use new experimental technology to try and overcome these engieering challenges. 
-
-For example, we have recently developed a real-time absorption-emission setup to generate time-series potassium number density.
+We hope to use new experimental technology, paried with historical knowledge, to determine pathways that can overcome the engieering challenges associated with MHD power generation. For example, we have recently developed a real-time absorption-emission setup to monitor real time potassium number density in the oxy-fuel free jet. You can see a video below where the potassium spectral lines on the right are fit with a model to observe the rising potassium concentration at the exit of the torch as the potassium seeding is turned on. 
 
 
 

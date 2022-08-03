@@ -1,120 +1,176 @@
-Here we derive a simplified form of the Levelized cost of electricity
-(LCOS):
+  $\mathbf{E}_{\mathbf{SM}}$                Storage medium energy capacity           $kWh$
 
-<br>$$LCOS\ \lbrack\frac{\$}{kWh}\rbrack = C_{E,in}(\frac{1}{\eta_{RT}} - 1) + \frac{(C_{kW} + C_{kWh}*DD)}{LT*\eta_{d}}$$
+  <br>
 
-<br>$C_{E,in}$ -- Cost of electricity purchased (\$/kWh)
+  $\mathbf{E}_{\mathbf{r}}$                 Rated Output energy capacity             $kWh$
 
-<br>$C_{kW}$ -- Power Capacity Capital Cost (\$/kW)
+  <br>
+  $\mathbf{E}_{\mathbf{in}}$                Rated Input energy capacity              $kWh$
 
-<br>$C_{kWh}$ -- Energy Capacity Capital Cost (\$/kWh)
+  <br>
+  $\mathbf{Pow}_{\mathbf{R}}$               Rated Power Capacity                     $kW$
 
-<br>$\eta_{RT}$ -- Round trip efficiency
+  <br>
+  $\mathbf{C}_{\mathbf{kW}}$                Power Capacity Capital Cost              $\$/kW$
 
-<br>$DD$ -- Discharge Duration (hours)
+  <br>
+  $\mathbf{C}_{\mathbf{kWh}}$               Energy Capacity Capital Cost             $\$/kWh$
 
-<br>$LT$ -- System Lifetime (hours = 8760*years)
+  <br>
+  $\mathbf{P}_{\mathbf{chg}}$               Electricity Price during charge          $\$/kWh$
 
-<br>$\eta_{d}$- Discharge Efficiency
+  <br>
+  $\mathbf{P}_{\mathbf{dis}}$               Electricity price during discharge       $\$/kWh$
 
-<br>
+  <br>
+  $\mathbf{r}$                              Discount rate                            
 
-The starting point is the Levelized Cost of Electricity (LCOE) is the
-price that the energy storage system operator must charge for
-electricity to break even over the lifetime of the system.
+  <br>
+  $\mathbf{\eta}_{\mathbf{RT}}$             Round trip efficiency                    
 
-<br>$$LCOE\ \left\lbrack \frac{\$}{kWh} \right\rbrack = \frac{\sum_{n}^{}{\frac{C_{charge}}{(1 + r)^{n}} +}C_{invest} + \sum_{n}^{}{\frac{C_{O\& M}}{(1 + r)^{n}} +}\text{~}\sum_{n}^{}\frac{C_{EOL}}{(1 + r)^{n}}}{\sum_{n}^{}\frac{E_{out}}{(1 + r)^{n}}}$$
+  <br>
+  $\mathbf{n}_{\mathbf{c}}$                 Number Cycles per year                   $Cycles/year$
 
-<br>$r$ -- discount rate
+  <br>
+  $\mathbf{DD}$                             Discharge Duration                       $hours$
 
-<br>$n$ -- number of years (costs and output are accumulated over a year)
+  <br>
+  $\mathbf{LT}$                             System Lifetime                          $years$
 
-<br>$C_{charge}$ -- Charging Cost (\$/year)
+  <br>
+  $\mathbf{L}\mathbf{T}_{\mathbf{eff}}$     Effective System Lifetime from discount  $years$
 
-<br>$C_{invest}$- Investment costs (\$)
+  <br>
+  $\mathbf{L}\mathbf{T}_{\mathbf{eff,h}}$   Effective System Lifetime from discount  $hours$
 
-<br>$C_{O\& M}$- Operation and Maintenance costs (\$/year)
 
-<br>$C_{EOL}$ -- End of life costs (\$/year)
+  <br>
+  $\mathbf{CF}$                             Capacity Factor                          
 
-<br>$E_{out}$ -- Electricity out (kWh)
+  <br>
+  $\mathbf{\eta}_{\mathbf{d}}$              Discharge Efficiency                     
 
-<br>
-To simplify this equation let's neglect $O\& M$ and $EOL$ costs. Further
-we will neglect the discount rate ($r = 1$). By neglecting the discount
-rate we are assuming the charging cost does not change and those terms
-can be pulled out of the sums (revisit). Note that neglecting the
-discount rate overemphasizes the benefit of technologies with long
-lifetimes, as in reality cash flows in the future will be less valuable
-than today.
+  <br>
+  $\mathbf{VOM}$                            Variable Operation and Maintenance       $\$/kWh - cycle$
 
-Considering the **Lifetime (LT)** of the system to be $\Sigma_{n}$ we
-arrive at
+  <br>
+  $\mathbf{FOM}$                            Fixed operation and Maintenance          $\$/kW - year$
 
-<br>$$LCOE\ \left\lbrack \frac{\$}{kWh} \right\rbrack = \frac{LT*C_{charge} + \ C_{invest}}{LT*E_{out}}$$
+  <br>
+  $\mathbf{FO}\mathbf{M}_{\mathbf{h}}$      Fixed operation and Maintenance          $\$/kW - hours$
 
-<br>$$LCOE\ \left\lbrack \frac{\$}{kWh} \right\rbrack = \frac{C_{charge}}{E_{out}} + \frac{C_{invest}}{LT*E_{out}}$$
 
-We can write the charging cost in terms of the price of electricity paid
-by the system operator $C_{E,in}$ (\$/kWh) and the electricity input
-<br>$(E_{in})$.
+  <br>
+  <br>
 
-<br>$$C_{charge} = C_{E,in}*E_{in}$$
 
-The electricity input and output are related by the round trip
-efficiency $\eta_{RT}$:
+We begin by constructing
+the Total Cost of Ownership (TCO) of the system. Generally following
+Albertus we write :
 
-<br>$$E_{out} = E_{in}\eta_{RT}$$
+$$TCO = \ C_{kWh}E_{SM} + C_{kW}{Pow}_{R}$$
 
-Therefore the first term of the LCOE can be rewritten
+$$+ \sum_{t}^{LT}{\frac{1}{(1 + r)^{t}}\left\lbrack P_{chg,t}E_{in,t}n_{c,t} + VOM_{t}n_{c,t}E_{r} + {Pow}_{R}FOM \right\rbrack}$$
 
-<br>$$LCOE\ \left\lbrack \frac{\$}{kWh} \right\rbrack = \frac{C_{E,in}}{\eta_{RT}} + \frac{C_{invest}}{LT*E_{out}}$$
+$$+ E_{SM}C_{R,e}(1 + r)^{L/n_{c}}$$
 
-The first term, which originated from the charging cost, means that
-round trip energy losses require the system operator to overpurchased
-electricity by a factor of $\frac{1}{\eta_{RT}}$. It is helpful to
-define the Levelized cost of storage (LCOS) which subtracts off the cost
-of electricity to only look at the extra cost due to inefficiencies.
+The first two terms in this equation are the overnight energy and power
+capital costs. The next set of terms represent constant payments that
+must be made to charge the system and pay variable and fixed operation
+and maintenance costs. These payment terms are indexed by the period in
+years $t$ during which they are paid and discounted by the discount
+factor $\frac{1}{(1 + r)^{t}}$The final term is the cost to replace the
+storage medium at some point in the system lifetime. We can see that the
+discounted storage medium replacement costs $C_{R,e}(1 + r)^{L/n_{c}}$
+can be incorporated as an inflated $C_{kWh}$ and we neglect this term.
 
-<br>$$LCOS = LCOE - C_{E,in}$$
+The $TCO$ can be equated to the present value of the revenue generated
+over the system lifetime, $PVR$. We consider an arbitrage revenue stream
+where money is generated upon discharge of the rated energy capacity at
+the price $P_{dis}$. Albertus also considers a constant revenue stream
+for on-demand power capacity.^6^
 
-<br>$$LCOS = C_{E,in}(\frac{1}{\eta_{RT}} - 1) + \frac{C_{invest}}{LT*E_{out}}$$
+$$PVR = \ \sum_{t}^{LT}{\frac{1}{(1 + r)^{t}}P_{dis,t}E_{r,t}n_{c,t}}$$
 
-Therefore for $\eta_{RT} = 1,$ the only extra cost that must be charged
-beyond the base electricity cost is what is needed to pay back the
-initial investment.
+For the system to be economically viable, $PVR = TCO$
 
-The investment cost can be written in terms of an energy capital cost
-($C_{kWh}$) that scales with the storage medium energy capacity
-($Cap_{kWh}$) and a power capital cost ($C_{kW}$) that scales with the
-rated power discharge capacity ($Cap_{kW}$).
+$$\sum_{t}^{LT}{\frac{1}{(1 + r)^{t}}P_{dis,t}E_{r,t}n_{c,t}} = C_{kWh}E_{SM} + C_{kW}{Pow}_{R} + \sum_{t}^{LT}{\frac{1}{(1 + r)^{t}}\left\lbrack P_{chg,t}E_{in,t}n_{c,t} + VOM_{t}n_{c,t}E_{r} + {Pow}_{R}FOM \right\rbrack}$$
 
-<br>$$C_{invest} = \ C_{kWh}Cap_{kWh} + \ C_{kW}Cap_{kW}$$
+We can simplify the discount summations by considering the payments and
+income as constant values throughout the lifetime of the system (e.g.
+$n_{c,t} = n_{c}$). This is an often made implicit assumption in
+levelized cost of storage analyses that calculate the average price
+difference that must be charged over the lifetime of the system. In the
+case of constant annuities, the terms can be pulled out of the
+summations.
 
-Let's consider a storage device with an unrealistic but simplifying duty
-cycle where it charges instantly and then discharges constantly
-according to its power rating. In this case the discharge duration is
+$$P_{dis}E_{r}n_{c}\sum_{t}^{LT}\frac{1}{(1 + r)^{t}} = C_{kWh}E_{SM} + C_{kW}{Pow}_{R} + \left\lbrack P_{chg}E_{in}n_{c} + n_{c}E_{r}VOM + {Pow}_{R}FOM \right\rbrack\sum_{t}^{LT}\frac{1}{(1 + r)^{t}}$$
 
-<br>$$Duration = \frac{Cap_{kWh}}{Cap_{kW}}$$
+The remaining summations can be simplified with a geometric series into
+a term which we call an 'effective lifetime', $LT_{eff}$.
 
-<br>$$C_{invest} = Cap_{kW}(C_{kW} + C_{kWh}*DD)$$
+$$\sum_{t}^{LT}\frac{1}{(1 + r)^{t}} = \frac{1 - \frac{1}{(1 + r)^{LT}}}{r} = LT_{eff}$$
 
-The LCOS then becomes
+$LT_{eff}$ represents the effective (shortened) number of years to one
+could collect the constant cash flows to achieve the same result as
+collecting the discounted cash flows over the real lifetime of the
+system. Figure 1 shows $LT_{eff}$ as a function of both the $LT$ (the
+real lifetime) and $r$. Figure 1a shows that for a 10% discount rate,
+which is close to what is assumed in many levelized cost studies,
+$LT_{eff}$ asymptotically approaches approximately 10 years. Figure 1b
+shows that $LT_{eff}\sim 10\ years\ $for most lifetimes and discount
+rates around 10%. Therefore, we assume $LT_{eff}$ = 10 years.
 
-<br>$$LCOS = C_{E,in}(\frac{1}{\eta_{RT}} - 1) + \frac{Cap_{kW}(C_{kW} + C_{kWh}*DD)}{LT*E_{out}}$$
+The above equation shows that for constant cash flows over the lifetime
+of the system, the discount rate effectively acts as a shortening of the
+system lifetime as future cash flows are heavily discounted. This means
+that technologies with long lifetimes to not be viewed as favorably as
+otherwise and this is among the criticisms of discounted cash flow
+analysis for selecting energy technologies.
 
-We can write
 
-<br>$$Lifetime*E_{out} = \ Cap_{kWh}*\# cycles*\eta_{discharge}$$
+Figure : a) $LT_{eff}$ vs $LT$ for different discount rates and b)
+$LT_{eff}$ vs discount rate (r) for different fixed $LT$
 
-Where $\eta_{discharge}$ is the discharge efficiency.
-<br>$\eta_{discharge} = \eta_{store}*\eta_{out}$.
+With the simplification described above the TCO=PVR equation becomes
 
-<br>$$LCOS = C_{E,in}(\frac{1}{\eta_{RT}} - 1) + \frac{Cap_{kW}(C_{kW} + C_{kWh}*DD)}{Cap_{kWh}*\# cycles*\eta_{d}}$$
+$$P_{dis}E_{r}n_{c}LT_{eff} = C_{kWh}E_{SM} + C_{kW}{Pow}_{R} + \left\lbrack P_{chg}E_{in}n_{c} + n_{c}E_{r}VOM + {Pow}_{R}FOM \right\rbrack LT_{eff}$$
 
-Again we can use the definition of the duration above, along with
-<br>$DD*\# cycles = LT*CF$ where CF is the capacity factor.
+We first simplify the number of terms with the relationships
+$E_{SM} = E_{r}/\eta_{d}$ and $E_{in} = E_{r}/\eta_{RT}$.
 
-<br>$$LCOS = C_{E,in}(\frac{1}{\eta_{RT}} - 1) + \frac{(C_{kW} + C_{kWh}*DD)}{CF*LT*\eta_{d}}$$
+$$P_{dis}E_{r}n_{c}LT_{eff} = \frac{C_{kWh}E_{r}}{\eta_{d\ }}\  + C_{kW}{Pow}_{R} + \left\lbrack \frac{P_{chg}E_{r}n_{c}}{\eta_{RT}}\  + n_{c}E_{r}VOM + {Pow}_{R}FOM \right\rbrack LT_{eff}$$
 
-For now, we just assume CF= 1, but this should be revisited.
+We can then divide through by the discounted lifetime energy output
+$E_{r}n_{c}LT_{eff}$ to determine $P_{dis}$. Because we have assumed an
+average constant electricity price and divided by the total electricity
+output of the system over its lifetime this can replace $P_{dis}$ with
+the LCOE. We also use the relationship $DD = \ E_{r}/{Pow}_{R}$
+
+$$LCOE = \frac{1}{n_{c}LT_{eff}}\lbrack\frac{C_{kWh}}{\eta_{d\ }}\  + \frac{C_{kW}}{DD}\rbrack + \frac{P_{chg}}{\eta_{RT}} + \ VOM + \frac{FOM}{DDn_{c}}$$
+
+We can subtract $P_{chg}$ from both sides to determine the required
+average price arbitrage, or the levelized cost of storage,
+$LCOS = {LCOE - P}_{chg}$. This metric has also been referred to as the
+'required average price spread' and assumes that electricity arbitrage
+is the primary source of revenue.^8^
+
+$$LCOS = \frac{1}{n_{c}LT_{eff}}\left\lbrack \frac{C_{kWh}}{\eta_{d\ }}\  + \frac{C_{kW}}{DD} \right\rbrack + P_{chg}\left( \frac{1}{\eta_{RT}} - 1 \right) + \ VOM + \frac{FOM}{DDn_{c}}$$
+
+$n_{c}$ will be determined by DD but also the capacity factor
+$CF = n_{c}/n_{c,max}$, where $n_{c,max} = \frac{4380\ h/y}{DD}$. . We
+assume maximum accumulated discharge duration throughout a year is 4380
+hours, following Albertus. This means that a CF = 1 means the charging
+and discharging times are equal and the system is in constant operation
+throughout the year.
+
+We can then rewrite $LCOS\ $as
+
+$$LCOS = \frac{1}{CF*4380*LT_{eff}}\left\lbrack \frac{C_{kWh}}{\eta_{d\ }}*DD\  + C_{kW} \right\rbrack + P_{chg}\left( \frac{1}{\eta_{RT}} - 1 \right) + \ VOM + 4380\frac{FOM}{DD*CF}$$
+
+This equation can be rewritten converting the units of $LT_{eff}$ and
+$FOM$ to hours
+
+$$LCOS = \frac{1}{CF*LT_{eff,h}}\left\lbrack \frac{C_{kWh}}{\eta_{d\ }}*DD\  + C_{kW} \right\rbrack + P_{chg}\left( \frac{1}{\eta_{RT}} - 1 \right) + \ VOM + \frac{FOM_{h}}{DD*CF}$$
+
+In the text we neglect the OM terms.

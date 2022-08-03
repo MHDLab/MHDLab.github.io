@@ -4,6 +4,7 @@ title: Magnetohydrodynamic power generation
 description: Research into magnetohydrodynamic power generation to enable oxy-fuel carbon capture
 img: /projects/2_aiaa/TurbovsMHD.PNG
 importance: 1
+display: true
 ---
 
 Our research studies magnetohydrodynamic (MHD) power generation for oxy-fuel based carbon capture.  You can find our recent paper studying the electrical resistance of our MHD channel here:

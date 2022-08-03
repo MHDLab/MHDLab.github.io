@@ -4,6 +4,7 @@ title: Symposium on the Engineering Aspects of Magnetohydrodynamics
 description: Preserving decades of research into magnetohydrodynamic power generation
 img: /projects/3_mhdseams/seamsbooks.jpg
 importance: 1
+display: true
 ---
 
 The SEAMS were a series of conference proceedings on the topic of magnetohydrodynamic power generation, called the Symposium on the Engineering Aspects of Magnetohydrodynamics (SEAM). The SEAM conferences took place nearly yearly from 1961 to 1997. 

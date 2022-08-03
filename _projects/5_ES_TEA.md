@@ -3,6 +3,7 @@ layout: page
 title: Energy Storage Materials Cost Floor Analysis 
 use_math: true
 img: /projects/5_ES_TEA/thumbnail.png
+display: false
 ---
 
 This page is an ongoing attempt to consolidate data from the literature on the material cost floor for the energy capital cost ($\\$/kWh$) for different energy types suitable for long duration storage. 

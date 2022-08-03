@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Energy Storage Materials Cost Floor Analysis 
+title: Long Duration Energy Storage Techno-Economic Analysis 
 use_math: true
 img: /projects/5_ES_TEA/thumbnail.png
 display: true
 ---
 
-This page hosts some preliminary interactive visualizations of the data collected of the material cost floor for the energy capital cost ($USD/kWh$) for different energy types suitable for long duration storage. The details of the the methods used for data collection are part of a manuscript in preparation and available on request. The work on this page is particularly inspired by [Albertus 2020](https://www.cell.com/joule/pdf/S2542-4351(19)30539-2.pdf) and [Hunter 2021](https://www.sciencedirect.com/science/article/abs/pii/S2542435121003068).
+This page hosts some preliminary interactive visualizations of the data collected of the material cost floor for the energy capital cost ($USD/kWh$) for different energy types suitable for long duration energy storage. The details of the the methods used for data collection are part of a manuscript in preparation and available on request. The work on this page is particularly inspired by [Albertus 2020](https://www.cell.com/joule/pdf/S2542-4351(19)30539-2.pdf) and [Hunter 2021](https://www.sciencedirect.com/science/article/abs/pii/S2542435121003068).
 
 
 # Levelized cost of storage (LCOS)
@@ -50,7 +50,7 @@ The scaling factor with duration represents the key figure of merit for long dur
 
 We can get an idea of the ballpark of what $C_{kWh}$ is required by considering the tradeoffs between different parameters in the LCOS equation to achieve a fixed LCOS of 0.1 USD/kWh. Figure 1b shows economically viable combinations of $C_{kW}$ and  $C_{kWh}$ by solving the LCOS equation for the maximum allowable $C_{kW}$ as a funciton of $C_{kWh}$, defining a tradeoff curve of economic viabaility. We can see that for reasonable efficiency of 0.75, then $ C_{kWh} <\approx 20\ USD/kWh $ is needed for ~100 hours of storage duration, even as $C_{kW}$ approaches zero.
 
-# Materials Energy capital cost ($C_{kWh,mat}$) dataset
+# Materials energy capital cost ($C_{kWh,mat}$) dataset
 
 The cost of the material that the storage medium is built out of sets a lower bound on the achievable $C_{kWh}$. Therefore we meed to find a storage medium with a **material energy capital cost $(C_{kWh, mat})$** than approximately $10\ USD/kWh$.  $C_{kWh, mat}$ is calculated from the energy density, $\rho_E$ [kWh/kg], of the storage media (storing a given form of enegy) and the material price, $C_{mat}$  [USD/kg], of the materials used in the storage media through the equation 
 

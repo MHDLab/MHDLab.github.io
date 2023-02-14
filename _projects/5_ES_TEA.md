@@ -48,7 +48,7 @@ $$
 
 The scaling factor with duration represents the key figure of merit for long duration energy storage systems. In this expression the component that will be able to vary over many orders of magnitude is $C_{kWh}$ and therefore could be considered the most important.  
 
-We can get an idea of the ballpark of what $C_{kWh}$ is required by considering the tradeoffs between different parameters in the LCOS equation to achieve a fixed LCOS of 0.1 USD/kWh. Figure 1b shows economically viable combinations of $C_{kW}$ and  $C_{kWh}$ by solving the LCOS equation for the maximum allowable $C_{kW}$ as a funciton of $C_{kWh}$, defining a tradeoff curve of economic viabaility. We can see that for reasonable efficiency of 0.75, then $ C_{kWh} <\approx 20\ USD/kWh $ is needed for ~100 hours of storage duration, even as $C_{kW}$ approaches zero.
+We can get an idea of the ballpark of what $C_{kWh}$ is required by considering the tradeoffs between different parameters in the LCOS equation to achieve a fixed LCOS of 0.1 USD/kWh. Figure 1b shows economically viable combinations of $C_{kW}$ and  $C_{kWh}$ by solving the LCOS equation for the maximum allowable $C_{kW}$ as a funciton of $C_{kWh}$, defining a tradeoff curve of economic viabaility. We can see that for reasonable efficiency of 0.75, then $ C_{kWh} <\approx 10\ USD/kWh $ is needed for ~100 hours of storage duration, even as $C_{kW}$ approaches zero.
 
 # Materials energy capital cost ($C_{kWh,mat}$) dataset
 

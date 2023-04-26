@@ -3,7 +3,7 @@ layout: page
 title: Long Duration Energy Storage Techno-Economic Analysis 
 use_math: true
 img: /projects/5_ES_TEA/thumbnail.png
-display: true
+display: false
 ---
 
 This page hosts some preliminary interactive visualizations of the data collected of the material cost floor for the energy capital cost ($USD/kWh$) for different energy types suitable for long duration energy storage. The details of the the methods used for data collection are part of a manuscript in preparation and available on request. The work on this page is particularly inspired by [Albertus 2020](https://www.cell.com/joule/pdf/S2542-4351(19)30539-2.pdf) and [Hunter 2021](https://www.sciencedirect.com/science/article/abs/pii/S2542435121003068).

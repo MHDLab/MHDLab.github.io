@@ -3,7 +3,7 @@ layout: page
 title: Building citation networks to obtain literature datasets
 description: Using the semantic scholar research corpus citation data to generate citation network graphs
 img: /projects/4_citationmaps/citation-map.PNG
-importance: 1
+importance: 2
 display: true
 ---
 

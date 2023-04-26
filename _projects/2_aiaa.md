@@ -3,7 +3,7 @@ layout: page
 title: Magnetohydrodynamic power generation
 description: Research into magnetohydrodynamic power generation to enable oxy-fuel carbon capture
 img: /projects/2_aiaa/TurbovsMHD.PNG
-importance: 1
+importance: 3
 display: true
 ---
 

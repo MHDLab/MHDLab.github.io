@@ -3,7 +3,7 @@ layout: page
 title: Symposium on the Engineering Aspects of Magnetohydrodynamics
 description: Preserving decades of research into magnetohydrodynamic power generation
 img: /projects/3_mhdseams/seamsbooks.jpg
-importance: 1
+importance: 4
 display: true
 ---
 
